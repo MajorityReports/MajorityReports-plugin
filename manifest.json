@@ -1,0 +1,41 @@
+{
+    "manifest_version": 2,
+    "name": "majorityreports",
+    "short_name": "MR",
+    "description": "Majority Reports",
+    "version": "0.1",
+    "permissions": [
+        "https://*.reddit.com/",
+        "http://*.reddit.com/",
+        "tabs",
+        "storage",
+        "unlimitedStorage"
+    ],
+    "icons": {
+        // "128": "images/icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*.reddit.com/*",
+                "https://*.reddit.com/*"
+            ],
+            "css": [
+                "core.css"
+            ],
+            "js": [
+                "libs/jquery-2.1.4.min.js",
+                "libs/snuownd.js",
+                "libs/keyhandler.js",
+                "inside.js",
+                "outside.js",
+                "core.js",
+                "init.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        "libs/jquery-2.1.1.min.js",
+        "libs/snuownd.js"
+    ]
+}
